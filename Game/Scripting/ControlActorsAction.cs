@@ -5,9 +5,9 @@ using Unit05.Game.Services;
 namespace Unit05.Game.Scripting
 {
     /// <summary>
-    /// <para>An input action that controls the snake.</para>
+    /// <para>An input action that controls the cycle.</para>
     /// <para>
-    /// The responsibility of ControlActorsAction is to get the direction and move the snake's head.
+    /// The responsibility of ControlActorsAction is to get the direction and move the cycle's head.
     /// </para>
     /// </summary>
     public class ControlActorsAction : Action
@@ -50,8 +50,8 @@ namespace Unit05.Game.Scripting
                 direction = new Point(0, Constants.CELL_SIZE);
             }
 
-            Snake snake = (Snake)cast.GetFirstActor("snake");
-            snake.TurnHead(direction);
+            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            cycle.TurnHead(direction);
 
         }
     }
