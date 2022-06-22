@@ -100,8 +100,11 @@ namespace Unit05.Game.Casting
         /// </summary>
         private void PrepareBody()
         {
-            int x = Constants.MAX_X / 2;
-            int y = Constants.MAX_Y / 2;
+            Random random = new Random();
+            int rand_x = random.Next(2, 8);
+            int rand_y = random.Next(2, 8);
+            int x = Constants.MAX_X / rand_x;
+            int y = Constants.MAX_Y / rand_y;
 
             for (int i = 0; i < Constants.CYCLE_LENGTH; i++)
             {

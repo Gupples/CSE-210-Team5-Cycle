@@ -45,13 +45,15 @@ namespace Unit05.Game.Scripting
             }
 
             // down
-            if (keyboardService.IsKeyDown("s")|| keyboardService.IsKeyDown("down") || keyboardService.IsKeyDown("k"))
+            if (keyboardService.IsKeyDown("s")|| keyboardService.IsKeyDown("down") || keyboardService.IsKeyDown("j"))
             {
                 direction = new Point(0, Constants.CELL_SIZE);
             }
 
             Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            Cycle cycle_two = (Cycle)cast.GetFirstActor("cycle_two");
             cycle.TurnHead(direction);
+            cycle_two.TurnHead(direction);
 
         }
     }
