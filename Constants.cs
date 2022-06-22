@@ -7,7 +7,7 @@ namespace Unit05.Game
     /// <summary>
     /// <para>A tasty item that cycles like to eat.</para>
     /// <para>
-    /// The responsibility of Food is to select a random position and points that it's worth.
+    /// The responsibility of ? is to select a random position and points that it's worth.
     /// </para>
     /// </summary>
     public class Constants
