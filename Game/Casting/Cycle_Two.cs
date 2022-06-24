@@ -8,14 +8,14 @@ namespace Unit05.Game.Casting
     /// <para>A long limbless reptile.</para>
     /// <para>The responsibility of Cycle is to move itself.</para>
     /// </summary>
-    public class Cycle : Actor
+    public class Cycle_Two : Actor
     {
         private List<Actor> segments = new List<Actor>();
 
         /// <summary>
         /// Constructs a new instance of a Cycle.
         /// </summary>
-        public Cycle()
+        public Cycle_Two()
         {
             PrepareBody();
         }
@@ -111,7 +111,7 @@ namespace Unit05.Game.Casting
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.RED : Constants.ORANGE;
+                Color color = i == 0 ? Constants.YELLOW : Constants.GREEN;
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);
