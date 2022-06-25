@@ -29,10 +29,13 @@ namespace Unit05.Game.Scripting
 
             Cycle_Two cycle_two = (Cycle_Two)cast.GetFirstActor("cycle_two");
             List<Actor> segments_two = cycle_two.GetSegments();
+
+            List<Actor> messages = cast.GetActors("messages");
             
             videoService.ClearBuffer();
             videoService.DrawActors(segments);
             videoService.DrawActors(segments_two);
+            videoService.DrawActors(messages);
             videoService.FlushBuffer();
         }
     }
