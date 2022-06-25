@@ -28,45 +28,45 @@ namespace Unit05.Game.Scripting
         public void Execute(Cast cast, Script script)
         {
             // left ----------------------------------------------------------------------------
-            if (keyboardService.IsKeyDown("a") || keyboardService.IsKeyDown("left"))
+            if (keyboardService.IsKeyDown("a"))
             {
                 direction = new Point(-Constants.CELL_SIZE, 0);
             }
 
-            if (keyboardService.IsKeyDown("j"))
+            if (keyboardService.IsKeyDown("j") || keyboardService.IsKeyDown("left"))
             {
                 direction_two = new Point(-Constants.CELL_SIZE, 0);
             }
 
             // right ----------------------------------------------------------------------------
-            if (keyboardService.IsKeyDown("d") || keyboardService.IsKeyDown("right"))
+            if (keyboardService.IsKeyDown("d"))
             {
                 direction = new Point(Constants.CELL_SIZE, 0);
             }
 
-            if (keyboardService.IsKeyDown("l"))
+            if (keyboardService.IsKeyDown("l") || keyboardService.IsKeyDown("right"))
             {
                 direction_two = new Point(Constants.CELL_SIZE, 0);
             }
 
             // up ----------------------------------------------------------------------------
-            if (keyboardService.IsKeyDown("w")|| keyboardService.IsKeyDown("up"))
+            if (keyboardService.IsKeyDown("w"))
             {
                 direction = new Point(0, -Constants.CELL_SIZE);
             }
 
-            if (keyboardService.IsKeyDown("i"))
+            if (keyboardService.IsKeyDown("i") || keyboardService.IsKeyDown("up"))
             {
                 direction_two = new Point(0, -Constants.CELL_SIZE);
             }
 
             // down ----------------------------------------------------------------------------
-            if (keyboardService.IsKeyDown("s")|| keyboardService.IsKeyDown("down"))
+            if (keyboardService.IsKeyDown("s"))
             {
                 direction = new Point(0, Constants.CELL_SIZE);
             }
 
-            if (keyboardService.IsKeyDown("k"))
+            if (keyboardService.IsKeyDown("k") || keyboardService.IsKeyDown("down"))
             {
                 direction_two = new Point(0, Constants.CELL_SIZE);
             }

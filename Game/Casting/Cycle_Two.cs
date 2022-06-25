@@ -101,11 +101,6 @@ namespace Unit05.Game.Casting
         private void PrepareBody()
         {
             Random random = new Random();
-            //int rand_x = random.Next(2, 8);
-            //int rand_y = random.Next(2, 8);
-            //int x = Constants.MAX_X / 8;
-            //int y = Constants.MAX_Y / 2;
-
             int[] numList = {2, 4, 8, 16};
             int rand_x = random.Next(0, 3);
             int rand_y = random.Next(0, 3);
