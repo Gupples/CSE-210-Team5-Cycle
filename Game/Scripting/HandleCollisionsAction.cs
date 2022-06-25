@@ -72,6 +72,11 @@ namespace Unit05.Game.Scripting
                 message.SetPosition(position);
                 cast.AddActor("messages", message);
 
+                // create object to display who won
+                Actor winner = new Actor();
+                winner.SetText("The winner is: ");
+                cast.AddActor("winner", winner);
+
                 // make everything white
                 foreach (Actor segment in segments)
                 {
