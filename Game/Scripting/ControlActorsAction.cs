@@ -71,11 +71,11 @@ namespace Unit05.Game.Scripting
                 direction_two = new Point(0, Constants.CELL_SIZE);
             }
 
-            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
-            Cycle_Two cycle_two = (Cycle_Two)cast.GetFirstActor("cycle_two");
+            Cycle cycle = (Cycle)cast.GetFirstActor("cycles");
             cycle.TurnHead(direction);
-            cycle_two.TurnHead(direction_two);
 
+            Cycle cycle_two = (Cycle)cast.GetSecondActor("cycles");
+            cycle_two.TurnHead(direction_two);
         }
     }
 }

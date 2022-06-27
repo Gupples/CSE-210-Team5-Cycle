@@ -24,10 +24,10 @@ namespace Unit05.Game.Scripting
         /// <inheritdoc/>
         public void Execute(Cast cast, Script script)
         {
-            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            Cycle cycle = (Cycle)cast.GetFirstActor("cycles");
             List<Actor> segments = cycle.GetSegments();
 
-            Cycle_Two cycle_two = (Cycle_Two)cast.GetFirstActor("cycle_two");
+            Cycle cycle_two = (Cycle)cast.GetSecondActor("cycles");
             List<Actor> segments_two = cycle_two.GetSegments();
 
             List<Actor> messages = cast.GetActors("messages");

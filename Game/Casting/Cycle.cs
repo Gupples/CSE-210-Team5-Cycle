@@ -11,12 +11,16 @@ namespace Unit05.Game.Casting
     public class Cycle : Actor
     {
         private List<Actor> segments = new List<Actor>();
+        Color head = new Color(255, 255, 255);
+        Color body = new Color (255, 255, 255);
 
         /// <summary>
         /// Constructs a new instance of a Cycle.
         /// </summary>
-        public Cycle()
+        public Cycle(Color head, Color body)
         {
+            this.head = head;
+            this.body = body;
             PrepareBody();
         }
 
@@ -64,7 +68,7 @@ namespace Unit05.Game.Casting
                 segment.SetPosition(position);
                 segment.SetVelocity(velocity);
                 segment.SetText("#");
-                segment.SetColor(Constants.GREEN);
+                segment.SetColor(body);
                 segments.Add(segment);
             }
         }
@@ -112,7 +116,7 @@ namespace Unit05.Game.Casting
                 Point position = new Point(x - i * Constants.CELL_SIZE, y);
                 Point velocity = new Point(1 * Constants.CELL_SIZE, 0);
                 string text = i == 0 ? "8" : "#";
-                Color color = i == 0 ? Constants.RED : Constants.ORANGE;
+                Color color = i == 0 ? head : body;
 
                 Actor segment = new Actor();
                 segment.SetPosition(position);

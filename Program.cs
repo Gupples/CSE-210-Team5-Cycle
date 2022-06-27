@@ -4,7 +4,7 @@ using Unit05.Game.Scripting;
 using Unit05.Game.Services;
 
 
-namespace Unit05
+namespace Unit05.Game
 {
     /// <summary>
     /// The program's entry point.
@@ -17,10 +17,20 @@ namespace Unit05
         /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
+            Color head_1 = new Color(0, 0, 0);
+            head_1 = Constants.GREEN;
+            Color body_1 = new Color(0, 0, 0);
+            body_1 = Constants.GREEN;
+            Color head_2 = new Color(0, 0, 0);
+            head_2 = Constants.RED;
+            Color body_2 = new Color(0, 0, 0);
+            body_2 = Constants.RED;
+
             // create the cast
             Cast cast = new Cast();
-            cast.AddActor("cycle", new Cycle());
-            cast.AddActor("cycle_two", new Cycle_Two());
+            cast.AddActor("cycles", new Cycle(head_1, body_1));
+            cast.AddActor("cycles", new Cycle(head_2, body_2));
+
 
             // create the services
             KeyboardService keyboardService = new KeyboardService();

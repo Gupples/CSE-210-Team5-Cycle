@@ -42,7 +42,7 @@ namespace Unit05.Game.Scripting
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
-            Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+            Cycle cycle = (Cycle)cast.GetFirstActor("cycles");
             Actor head = cycle.GetHead();
             List<Actor> body = cycle.GetBody();
 
@@ -59,7 +59,7 @@ namespace Unit05.Game.Scripting
         {
             if (isGameOver == true)
             {
-                Cycle cycle = (Cycle)cast.GetFirstActor("cycle");
+                Cycle cycle = (Cycle)cast.GetFirstActor("cycles");
                 List<Actor> segments = cycle.GetSegments();
 
                 // create a "game over" message
@@ -84,6 +84,5 @@ namespace Unit05.Game.Scripting
                 }
             }
         }
-
     }
 }
